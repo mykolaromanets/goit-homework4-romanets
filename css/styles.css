@@ -458,10 +458,13 @@ address {
   border-radius: 4px;
 }
 
-.button-portfolio-link :is(:hover, :focus) {
+.button-portfolio-link:hover,
+.button-portfolio-link:focus {
   background-color: var(--btn-focus-color);
   color: var(--main-bg-colour);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -472,7 +475,9 @@ address {
   column-gap: 24px;
 }
 
-.portfolio-list-item {
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-border {
