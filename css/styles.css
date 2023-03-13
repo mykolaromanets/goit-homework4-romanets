@@ -337,7 +337,7 @@ address {
 
 .button-portfolio-link {
   color: var(--accent-colour);
-
+  letter-spacing: 0.02em;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
