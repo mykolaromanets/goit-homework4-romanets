@@ -35,6 +35,9 @@ p {
 a {
   text-decoration: none;
 }
+button {
+  border: none;
+}
 
 body {
   background: var(--main-bg-colour);
@@ -146,6 +149,7 @@ address {
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-image: var(--bg-gradient-color), url(../images/people-office.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -177,7 +181,6 @@ address {
   min-width: 169px;
   height: 56px;
   letter-spacing: 0.04em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
   cursor: pointer;
@@ -243,6 +246,7 @@ address {
 .services-item {
   width: calc((100% - 72px) / 4);
   display: flex;
+  flex-direction: column;
 }
 
 .icon-border {
@@ -254,6 +258,7 @@ address {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-bottom: 8px;
 }
 
 .services-icon {
@@ -285,10 +290,74 @@ address {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
 
+.team-social-list-link:hover,
+.team-social-list-link:focus {
+  background-color: var(--btn-focus-color);
+}
+.team-social-list-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-social-list-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--accent-colour);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.team-social-icon {
+  fill: var(--main-bg-colour);
+  width: 16px;
+  height: 16px;
+}
 .team-item-subscribe {
   text-align: center;
   padding: 32px 0;
+}
+
+.section-customers {
+  padding: 120px 0;
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  width: 168px;
+  height: 88px;
+}
+
+.customers-list-link {
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #8e8f99;
+}
+
+.customers-list-link:is(:hover, :focus) {
+  border-color: var(--btn-focus-color);
+  fill: var(--btn-focus-color);
+}
+
+.customers-icon {
+  width: 104px;
+  height: 56px;
 }
 
 /* Footer */
@@ -316,8 +385,49 @@ address {
 }
 
 .footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  display: flex;
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-networks-footer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  width: 208px;
+  height: 80px;
+}
+
+.social-networks-footer-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.footer-social-list-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.footer-social-list-link:is(:hover, :focus) {
+  background-color: #31d0aa;
+}
+
+.social-networks-footer-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-bg-colour);
 }
 
 /* Page Portfolio */
@@ -348,11 +458,9 @@ address {
   border-radius: 4px;
 }
 
-.button-portfolio-link:hover,
-.button-portfolio-link:focus {
-  background-color: #404bbf;
+.button-portfolio-link :is(:hover, :focus) {
+  background-color: var(--btn-focus-color);
   color: var(--main-bg-colour);
-
   cursor: pointer;
 }
 
