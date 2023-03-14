@@ -140,14 +140,11 @@ address {
 /* Hero */
 
 .section-hero {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: var(--main-title-colour);
   padding: 188px 0;
-}
 
-.hero-wrap {
-  background-color: rgba(46, 47, 66, 0.7);
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-image: var(--bg-gradient-color), url(../images/people-office.jpg);
 
   background-repeat: no-repeat;
@@ -245,8 +242,6 @@ address {
 
 .services-item {
   width: calc((100% - 72px) / 4);
-  display: flex;
-  flex-direction: column;
 }
 
 .icon-border {
@@ -257,7 +252,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+
   margin-bottom: 8px;
 }
 
@@ -385,9 +380,8 @@ address {
 }
 
 .footer-container {
-  /* padding-top: 100px;
-  padding-bottom: 100px; */
   display: flex;
+  align-items: baseline;
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
@@ -396,17 +390,13 @@ address {
 }
 
 .social-networks-footer {
-  display: flex;
-  flex-direction: column;
   margin-left: 120px;
-  width: 208px;
-  height: 80px;
 }
 
 .social-networks-footer-list {
   display: flex;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .footer-social-list-link {
@@ -418,15 +408,19 @@ address {
   align-items: center;
   border-radius: 50%;
 }
+
+.footer-social-icon {
+  fill: var(--main-bg-colour);
+  width: 24px;
+  height: 24px;
+}
 .footer-social-list-link:is(:hover, :focus) {
   background-color: #31d0aa;
 }
 
 .social-networks-footer-text {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--main-bg-colour);
 }
 
